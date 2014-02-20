@@ -5,7 +5,7 @@ MSStringifyMacros provides a convenient shorthand alternative to the normally te
 ---
 ## Benefits
 
-Here's an example for NSUserDefaults. Normally, when coding for NSUserDefaults you would follow an approach like this where you would create constants for the keys and then set and get the defaults. 
+Here's an example for NSUserDefaults. Normally, when coding for NSUserDefaults you would follow an approach like this where you would create constants for the keys and then set and get the defaults.
 
 ```
 #!objective-c
@@ -37,7 +37,7 @@ defaultForObject(self.foo);
 defaultForObject(self.bar);
 ```
 
-There is a lot less code, it's much simpler, and less error-prone.
+As you can see, there is a lot less code, it's much simpler, and less error-prone.
 
 
 ---
