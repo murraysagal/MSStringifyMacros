@@ -22,8 +22,6 @@
 		729D7A6E18B6223A0002B46A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 729D7A6C18B6223A0002B46A /* InfoPlist.strings */; };
 		729D7A7D18B623290002B46A /* MSStringifyMacros_UserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A7C18B623290002B46A /* MSStringifyMacros_UserDefaultsTests.m */; };
 		729D7A8518B6273E0002B46A /* MSStringifyMacros_ArchivingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A8418B6273E0002B46A /* MSStringifyMacros_ArchivingTests.m */; };
-		729D7A8C18B6455D0002B46A /* MSStringifyMacros_Archiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A8B18B6455D0002B46A /* MSStringifyMacros_Archiving.m */; };
-		729D7A9018B64F2D0002B46A /* MSStringifyMacros_UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A8F18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +59,7 @@
 		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSStringifyMacros.podspec; sourceTree = "<group>"; };
 		729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacros_Archiving.h; sourceTree = "<group>"; };
-		729D7A8B18B6455D0002B46A /* MSStringifyMacros_Archiving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_Archiving.m; sourceTree = "<group>"; };
 		729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacros_UserDefaults.h; sourceTree = "<group>"; };
-		729D7A8F18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_UserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
-				729D7A8B18B6455D0002B46A /* MSStringifyMacros_Archiving.m */,
 				729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */,
-				729D7A8F18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.m */,
 				729D7A4A18B6223A0002B46A /* MSStringifyMacros */,
 				729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */,
 				729D7A4318B622390002B46A /* Frameworks */,
@@ -269,9 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				729D7A5B18B6223A0002B46A /* ViewController.m in Sources */,
-				729D7A9018B64F2D0002B46A /* MSStringifyMacros_UserDefaults.m in Sources */,
 				729D7A5518B6223A0002B46A /* AppDelegate.m in Sources */,
-				729D7A8C18B6455D0002B46A /* MSStringifyMacros_Archiving.m in Sources */,
 				729D7A5118B6223A0002B46A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
