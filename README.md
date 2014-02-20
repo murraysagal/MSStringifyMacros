@@ -58,54 +58,54 @@ Alternatively you can directly add the required `*StringifyMacros.{h,m}` source 
 
 
 ---
-## Usage
+## NSUserDefaults
 
 The macros support all the common NSUserDefaults methods for conveniently setting and getting defaults. The parameter you pass can be a property, an instance variable, or a local variable. Once you set a default you must use the same property, instance variable, or an identically named local variable for getting the default. 
 
 ```
-// BOOLs...
-setDefaultForBOOL(yourBool);
-defaultForBOOL(yourBool);
+// BOOL...
+setDefaultForBool(yourBOOL);
+defaultForBool(yourBOOL);
 
-// doubles...
+// double...
 setDefaultForDouble(yourDouble);
 defaultForDouble(yourDouble);
 
-// floats...
+// float...
 setDefaultForFloat(yourFloat);
 defaultForFloat(yourFloat);
 
-// integers...
+// integer...
 setDefaultForInteger(yourInteger);
 defaultForInteger(yourInteger);
 
-// objects...
+// object...
 setDefaultForObject(yourObject);
 defaultForObject(yourObject);
 removeDefaultForObject(yourObject);
 
-// arrays...
+// array...
 defaultForArray(yourArray);
 
 // data...
 defaultForData(yourData);
 
-// dictionaries...
+// dictionary...
 defaultForDictionary(yourDictionary);
 
-// strings...
+// string...
 defaultForString(yourString);
 
-// arrays of strings...
+// array of strings...
 defaultForStringArray(yourArrayOfStrings);
 
-// urls...
+// url...
 defaultForURL(yourUrl);
 ```
 
 
 ---
-## Extras
+## NSUserDefaults Extras
 
 By default, NSUserDefaults returns immutable objects even if you set a default for a mutable object. These macros conveniently manage mutable objects...
 
@@ -123,6 +123,53 @@ You can also test for the existence or non-existence of a default for an object.
 BOOL exists = defaultExistsForObject(yourObject);
 BOOL doesNotExist = defaultDoesNotExistForObject(yourObject);
 ```
+
+
+---
+## NSCoding
+
+The macros support all the common NSKeyedArchiver and NSKeyedUnarchiver methods for convenient archiving and unarchiving. The parameter you pass can be a property, an instance variable, or a local variable. Once you archive you must use the same property, instance variable, or an identically named local variable for unarchiving.
+
+```
+// BOOL...
+encodeBool(BOOL);
+decodeBool(BOOL);
+
+// double...
+encodeDouble(double);
+decodeDouble(double);
+
+// float...
+encodeFloat(float);
+decodeFloat(float);
+
+// int...
+encodeInt(int);
+decodeInt(int);
+
+// int32...
+encodeInt32(int32_t);
+decodeInt32(int32_t);
+
+// int64...
+encodeInt64(int64_t);
+decodeInt64(int64_t);
+
+// objects...
+encodeObject(object);
+decodeObject(object);
+
+// checking for a value...
+containsValue(value);
+```
+
+*Important:* The macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the init and encode methods need to look like this:
+
+```
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
+```
+
 
 
 ---

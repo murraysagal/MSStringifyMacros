@@ -14,9 +14,9 @@
 #define encodeBool(BOOL)            [aCoder encodeBool:BOOL forKey:NS_STRINGIFY(BOOL)]
 #define encodeDouble(double)        [aCoder encodeDouble:double forKey:NS_STRINGIFY(double)]
 #define encodeFloat(float)          [aCoder encodeFloat:float forKey:NS_STRINGIFY(float)]
+#define encodeInt(int)              [aCoder encodeInt:int forKey:NS_STRINGIFY(int)]
 #define encodeInt32(int32_t)        [aCoder encodeInt32:int32_t forKey:NS_STRINGIFY(int32_t)]
 #define encodeInt64(int64_t)        [aCoder encodeInt64:int64_t forKey:NS_STRINGIFY(int64_t)]
-#define encodeInt(int)              [aCoder encodeInt:int forKey:NS_STRINGIFY(int)]
 #define encodeObject(object)        [aCoder encodeObject:object forKey:NS_STRINGIFY(object)]
 
 
