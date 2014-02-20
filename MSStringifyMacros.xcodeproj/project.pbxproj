@@ -93,9 +93,6 @@
 		729D7A3818B622390002B46A = {
 			isa = PBXGroup;
 			children = (
-				729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */,
-				729D7A8718B62A160002B46A /* LICENSE */,
-				729D7A8818B62A160002B46A /* README.md */,
 				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
 				729D7A8B18B6455D0002B46A /* MSStringifyMacros_Archiving.m */,
 				729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */,
@@ -104,6 +101,9 @@
 				729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */,
 				729D7A4318B622390002B46A /* Frameworks */,
 				729D7A4218B622390002B46A /* Products */,
+				729D7A8818B62A160002B46A /* README.md */,
+				729D7A8718B62A160002B46A /* LICENSE */,
+				729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */,
 			);
 			sourceTree = "<group>";
 		};
