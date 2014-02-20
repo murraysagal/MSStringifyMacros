@@ -1,19 +1,19 @@
 //
-//  NSUserDefaultsStringifyMacrosTests.m
-//  NSUserDefaultsStringifyMacrosTests
+//  MSStringifyMacros_UserDefaultsTests.m
+//  MSStringifyMacros
 //
 //  Created by Murray Sagal on 2/13/2014.
 //  Copyright (c) 2014 Murray Sagal. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "NSUserDefaults+StringifyMacros.h"
+#import "MSStringifyMacros_UserDefaults.h"
 
-@interface NSUserDefaultsStringifyMacrosTests : XCTestCase
+@interface MSStringifyMacros_UserDefaultsTests : XCTestCase
 
 @end
 
-@implementation NSUserDefaultsStringifyMacrosTests
+@implementation MSStringifyMacros_UserDefaultsTests
 
 - (void)setUp {
     

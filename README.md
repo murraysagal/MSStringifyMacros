@@ -5,7 +5,7 @@ MSStringifyMacros provides a convenient shorthand alternative to the normally te
 ---
 ## Benefits
 
-Normally, when coding for NSUserDefaults you would follow an approach like this where you would create constants for the keys and then set and get the defaults. 
+Here's an example for NSUserDefaults. Normally, when coding for NSUserDefaults you would follow an approach like this where you would create constants for the keys and then set and get the defaults. 
 
 ```
 #!objective-c
@@ -48,13 +48,13 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 
 ### Cocoapods
 
-1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`. If you want to add only specific macros you can use `pod 'MSStringifyMacros/NSUserDefaults'` or `pod 'MSStringifyMacros/NSCoding'`. Refer to the podspec for the current submodules.
+1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`. If you want to add only specific macros you can use `pod 'MSStringifyMacros/UserDefaults'` or `pod 'MSStringifyMacros/Archiving'`. Refer to the podspec for the current submodules.
 2. Install the pod(s) by running `pod install`.
-3. Where you need it `#import "NSUserDefaults+StringifyMacros.h"` or `#import "NSCoding+StringifyMacros.h"`.
+3. Where you need it `#import "MSStringifyMacros_Archiving.h"` or `#import "MSStringifyMacros_UserDefaults.h"`.
 
 ### Source Files
 
-Alternatively you can directly add the required `*StringifyMacros.{h,m}` source files to your project.
+Alternatively you can directly add the required `MSStringifyMacros*.{h,m}` source files to your project.
 
 
 ---

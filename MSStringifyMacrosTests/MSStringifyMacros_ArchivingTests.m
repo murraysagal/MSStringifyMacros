@@ -1,14 +1,13 @@
 //
-//  NSArchivingStringifyMacrosTests.m
-//  NSArchivingStringifyMacrosTests
+//  MSStringifyMacros_ArchivingTests.m
+//  MSStringifyMacros
 //
 //  Created by Murray Sagal on 2/15/2014.
 //  Copyright (c) 2014 Murray Sagal. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "NSKeyedArchiver+StringifyMacros.h"
-#import "NSKeyedUnarchiver+StringifyMacros.h"
+#import "MSStringifyMacros_Archiving.h"
 
 static BOOL shouldTestContainsValue;
 static BOOL containsValueTestResultExpectedYes;
@@ -68,14 +67,14 @@ static BOOL containsValueTestResultExpectedNo;
 
 
 
-@interface NSArchivingStringifyMacrosTests : XCTestCase
+@interface MSStringifyMacros_ArchivingTests : XCTestCase
 
 @property (strong, nonatomic) TestObject *testObject;
 @property (strong, nonatomic) NSString *filePath;
 
 @end
 
-@implementation NSArchivingStringifyMacrosTests
+@implementation MSStringifyMacros_ArchivingTests
 
 - (void)setUp
 {

@@ -1,0 +1,13 @@
+//
+//  MSStringifyMacros_Archiving.m
+//  MSStringifyMacros
+//
+//  Created by Murray Sagal on 2/20/2014.
+//  Copyright (c) 2014 Murray Sagal. All rights reserved.
+//
+
+#import "MSStringifyMacros_Archiving.h"
+
+@implementation MSStringifyMacros_Archiving
+
+@end
