@@ -20,7 +20,11 @@
 		729D7A6518B6223A0002B46A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4418B622390002B46A /* Foundation.framework */; };
 		729D7A6618B6223A0002B46A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4818B6223A0002B46A /* UIKit.framework */; };
 		729D7A6E18B6223A0002B46A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 729D7A6C18B6223A0002B46A /* InfoPlist.strings */; };
-		729D7A7018B6223A0002B46A /* MSStringifyMacrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A6F18B6223A0002B46A /* MSStringifyMacrosTests.m */; };
+		729D7A7B18B622FF0002B46A /* NSUserDefaults+StringifyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A7A18B622FF0002B46A /* NSUserDefaults+StringifyMacros.m */; };
+		729D7A7D18B623290002B46A /* NSUserDefaultsStringifyMacrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A7C18B623290002B46A /* NSUserDefaultsStringifyMacrosTests.m */; };
+		729D7A8218B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A7F18B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.m */; };
+		729D7A8318B627220002B46A /* NSKeyedArchiver+StringifyMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A8118B627220002B46A /* NSKeyedArchiver+StringifyMacros.m */; };
+		729D7A8518B6273E0002B46A /* NSArchivingStringifyMacrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D7A8418B6273E0002B46A /* NSArchivingStringifyMacrosTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +56,17 @@
 		729D7A6318B6223A0002B46A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		729D7A6B18B6223A0002B46A /* MSStringifyMacrosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSStringifyMacrosTests-Info.plist"; sourceTree = "<group>"; };
 		729D7A6D18B6223A0002B46A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		729D7A6F18B6223A0002B46A /* MSStringifyMacrosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacrosTests.m; sourceTree = "<group>"; };
+		729D7A7918B622FF0002B46A /* NSUserDefaults+StringifyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+StringifyMacros.h"; sourceTree = "<group>"; };
+		729D7A7A18B622FF0002B46A /* NSUserDefaults+StringifyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+StringifyMacros.m"; sourceTree = "<group>"; };
+		729D7A7C18B623290002B46A /* NSUserDefaultsStringifyMacrosTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsStringifyMacrosTests.m; sourceTree = "<group>"; };
+		729D7A7E18B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+StringifyMacros.h"; sourceTree = "<group>"; };
+		729D7A7F18B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+StringifyMacros.m"; sourceTree = "<group>"; };
+		729D7A8018B627220002B46A /* NSKeyedArchiver+StringifyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+StringifyMacros.h"; sourceTree = "<group>"; };
+		729D7A8118B627220002B46A /* NSKeyedArchiver+StringifyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+StringifyMacros.m"; sourceTree = "<group>"; };
+		729D7A8418B6273E0002B46A /* NSArchivingStringifyMacrosTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArchivingStringifyMacrosTests.m; sourceTree = "<group>"; };
+		729D7A8718B62A160002B46A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSStringifyMacros.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,15 @@
 		729D7A3818B622390002B46A = {
 			isa = PBXGroup;
 			children = (
+				729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */,
+				729D7A8718B62A160002B46A /* LICENSE */,
+				729D7A8818B62A160002B46A /* README.md */,
+				729D7A7E18B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.h */,
+				729D7A7F18B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.m */,
+				729D7A8018B627220002B46A /* NSKeyedArchiver+StringifyMacros.h */,
+				729D7A8118B627220002B46A /* NSKeyedArchiver+StringifyMacros.m */,
+				729D7A7918B622FF0002B46A /* NSUserDefaults+StringifyMacros.h */,
+				729D7A7A18B622FF0002B46A /* NSUserDefaults+StringifyMacros.m */,
 				729D7A4A18B6223A0002B46A /* MSStringifyMacros */,
 				729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */,
 				729D7A4318B622390002B46A /* Frameworks */,
@@ -137,7 +160,8 @@
 		729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */ = {
 			isa = PBXGroup;
 			children = (
-				729D7A6F18B6223A0002B46A /* MSStringifyMacrosTests.m */,
+				729D7A8418B6273E0002B46A /* NSArchivingStringifyMacrosTests.m */,
+				729D7A7C18B623290002B46A /* NSUserDefaultsStringifyMacrosTests.m */,
 				729D7A6A18B6223A0002B46A /* Supporting Files */,
 			);
 			path = MSStringifyMacrosTests;
@@ -249,7 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729D7A8318B627220002B46A /* NSKeyedArchiver+StringifyMacros.m in Sources */,
+				729D7A7B18B622FF0002B46A /* NSUserDefaults+StringifyMacros.m in Sources */,
 				729D7A5B18B6223A0002B46A /* ViewController.m in Sources */,
+				729D7A8218B627220002B46A /* NSKeyedUnarchiver+StringifyMacros.m in Sources */,
 				729D7A5518B6223A0002B46A /* AppDelegate.m in Sources */,
 				729D7A5118B6223A0002B46A /* main.m in Sources */,
 			);
@@ -259,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				729D7A7018B6223A0002B46A /* MSStringifyMacrosTests.m in Sources */,
+				729D7A7D18B623290002B46A /* NSUserDefaultsStringifyMacrosTests.m in Sources */,
+				729D7A8518B6273E0002B46A /* NSArchivingStringifyMacrosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
