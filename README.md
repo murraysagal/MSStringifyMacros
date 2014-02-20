@@ -163,7 +163,7 @@ decodeObject(object);
 containsValue(value);
 ```
 
-*Important:* The macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the init and encode methods need to look like this:
+**Important:** These macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the NSCoding init and encode methods need to look like this:
 
 ```
 - (void)encodeWithCoder:(NSCoder *)aCoder;
@@ -228,4 +228,4 @@ You can see the result yourself by inspecting your preprocessor output in Xcode.
 * be sure it builds
 * from the Product menu choose Perform Action then Preprocess "<yourFile>.m"
 
-In the specific case of NSUserDefaults, these macros make things easier because, with stringification, the required key parameters become self-generating. 
+In the case of NSUserDefaults and NSCoding, these macros make things easier because, with stringification, the required key parameters become self-generating. 
