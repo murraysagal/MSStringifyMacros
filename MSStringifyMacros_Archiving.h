@@ -24,7 +24,6 @@
 // THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
 
 
 #define NS_STRINGIFY(x)             @#x
@@ -52,8 +51,3 @@
 
 #define containsValue(value)        [aDecoder containsValueForKey:NS_STRINGIFY(value)]
 
-
-
-@interface MSStringifyMacros_Archiving : NSObject
-
-@end

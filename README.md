@@ -1,6 +1,6 @@
 # MSStringifyMacros
 
-MSStringifyMacros provides a convenient shorthand alternative to the normally tedious and potentially error-prone standard approach to coding for NSUserDefaults.
+MSStringifyMacros provides a convenient alternative to the normally tedious and potentially error-prone standard approach to coding for NSUserDefaults and NSCoding.
 
 ---
 ## Benefits
@@ -23,7 +23,7 @@ self.foo = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyForFoo];
 self.bar = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyForBar];
 ```
 
-But with stringification, explained in a later section, the tedious code above can be replaced with this...
+By leveraging a preprocessor feature called stringification (explained in a later section) the tedious code above can be replaced with this...
 
 ```
 #!objective-c
@@ -37,7 +37,7 @@ defaultForObject(self.foo);
 defaultForObject(self.bar);
 ```
 
-As you can see, there is a lot less code, it's much simpler, and less error-prone.
+As you can see, there is a lot less code, it's a lot simpler, and less error-prone.
 
 
 ---
@@ -54,7 +54,7 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 
 ### Source Files
 
-Alternatively you can directly add the required `MSStringifyMacros*.{h,m}` source files to your project.
+Alternatively you can directly add the required `MSStringifyMacros*.h` source files to your project.
 
 
 ---
@@ -64,16 +64,16 @@ The macros support all the common NSUserDefaults methods for conveniently settin
 
 ```
 // BOOL...
-setDefaultForBool(yourBOOL);
-defaultForBool(yourBOOL);
+setDefaultForBool(BOOL);
+defaultForBool(BOOL);
 
 // double...
-setDefaultForDouble(yourDouble);
-defaultForDouble(yourDouble);
+setDefaultForDouble(double);
+defaultForDouble(double);
 
 // float...
-setDefaultForFloat(yourFloat);
-defaultForFloat(yourFloat);
+setDefaultForFloat(float);
+defaultForFloat(float);
 
 // integer...
 setDefaultForInteger(yourInteger);

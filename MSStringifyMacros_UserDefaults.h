@@ -24,7 +24,6 @@
 // THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
 
 
 #define NS_STRINGIFY(x)                                     @#x
@@ -68,7 +67,3 @@
 #define defaultForURL(url)                                  url = [SUD URLForKey:NS_STRINGIFY(url)]
 
 
-
-@interface MSStringifyMacros_UserDefaults : NSObject
-
-@end
