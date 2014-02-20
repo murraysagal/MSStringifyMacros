@@ -1,6 +1,6 @@
-# NSUserDefaultsStringifyMacros
+# MSStringifyMacros
 
-NSUserDefaultsStringifyMacros provides a convenient shorthand alternative to the normally tedious and potentially error-prone standard approach to coding for NSUserDefaults.
+MSStringifyMacros provides a convenient shorthand alternative to the normally tedious and potentially error-prone standard approach to coding for NSUserDefaults.
 
 ---
 ## Benefits
@@ -43,18 +43,18 @@ There is a lot less code, it's much simpler, and less error-prone.
 ---
 ## Installation
 
-You can install NSUserDefaultsStringifyMacros in almost any Mac OS X or iOS project. I'm not certain if there were ever any versions of Xcode where the preprocessor didn't support stringification to an NSString (see the Stringification section below). If you know, please let me know.
+You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not certain if there were ever any versions of Xcode where the preprocessor didn't support stringification to an NSString (see the Stringification section below). If you know, please let me know.
 
 
 ### Cocoapods
 
-1. Add a pod entry for NSUserDefaultsStringifyMacros to your Podfile: `pod 'NSUserDefaultsStringifyMacros', '~> 0.0.1'`
+1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`. If you want to add only specific macros you can use `pod 'MSStringifyMacros/NSUserDefaults'` or `pod 'MSStringifyMacros/NSCoding'`. Refer to the podspec for the current submodules.
 2. Install the pod(s) by running `pod install`.
-3. Include NSUserDefaultsStringifyMacros wherever you need it with `#import "NSUserDefaults+StringifyMacros.h"`.
+3. Where you need it `#import "NSUserDefaults+StringifyMacros.h"` or `#import "NSCoding+StringifyMacros.h"`.
 
 ### Source Files
 
-Alternatively you can directly add the `NSUserDefaults+StringifyMacros.h` and `NSUserDefaults+StringifyMacros.m` source files to your project.
+Alternatively you can directly add the required `*StringifyMacros.{h,m}` source files to your project.
 
 
 ---

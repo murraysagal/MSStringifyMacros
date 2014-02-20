@@ -15,5 +15,13 @@ Pod::Spec.new do |s|
   s.platform        = :ios
   s.platform        = :osx
   s.source_files    = '*StringifyMacros.{h,m}'
+  
+  s.subspec 'NSUserDefaults' do |ss|
+    ss.source_files = 'NSUserDefaults+StringifyMacros.{h,m}'
+  end
+  
+  s.subspec 'NSCoding' do |ss|
+    ss.source_files = 'NSKeyed*StringifyMacros.{h,m}'
+  end
 
 end

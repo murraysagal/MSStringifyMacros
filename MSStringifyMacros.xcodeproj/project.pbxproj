@@ -65,7 +65,7 @@
 		729D7A8118B627220002B46A /* NSKeyedArchiver+StringifyMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+StringifyMacros.m"; sourceTree = "<group>"; };
 		729D7A8418B6273E0002B46A /* NSArchivingStringifyMacrosTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArchivingStringifyMacrosTests.m; sourceTree = "<group>"; };
 		729D7A8718B62A160002B46A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSStringifyMacros.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
