@@ -59,6 +59,7 @@ Macros are provided for conveniently working with NSUserDefaults and NSKeyedArch
 
 **Important**: The parameter you pass can be a property, an instance variable, or a local variable. It is critical to remember that the name of the parameter you pass is used to generate the string used for the key (see the Stringification section). So once you set a default or encode you must use either the same or an identically named property, instance variable, or local variable for getting the default or decoding.
 
+
 ### NSUserDefaults
 
 The macros support all the common NSUserDefaults methods for conveniently setting and getting defaults.
