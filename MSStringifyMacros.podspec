@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name            = 'MSStringifyMacros'
-  s.version         = '0.0.4'
+  s.version         = '0.1.0'
   s.license         = { :type => "MIT", :file => "LICENSE" }
   s.summary         = 'A set of macros for simplifying the use of NSUserDefaults and NSCoding.'
   s.description     = <<-DESC
