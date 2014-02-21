@@ -35,9 +35,9 @@ static BOOL containsValueTestResultExpectedNo;
         decodeBool(self.testBool);
         decodeDouble(self.testDouble);
         decodeFloat(self.testfloat);
+        decodeInt(self.testInt);
         decodeInt32(self.testInt32);
         decodeInt64(self.testInt64);
-        decodeInt(self.testInt);
         decodeObject(self.testString);
         
         if (shouldTestContainsValue) {
@@ -52,13 +52,11 @@ static BOOL containsValueTestResultExpectedNo;
 - (void)encodeWithCoder:(NSCoder *)aCoder {
 
     encodeBool(self.testBool);
-    
-    
     encodeDouble(self.testDouble);
     encodeFloat(self.testfloat);
+    encodeInt(self.testInt);
     encodeInt32(self.testInt32);
     encodeInt64(self.testInt64);
-    encodeInt(self.testInt);
     encodeObject(self.testString);
     
 }
