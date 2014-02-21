@@ -65,5 +65,3 @@
 
 #define setDefaultForURL(url)                               [SUD setURL:url forKey:NS_STRINGIFY(url)]
 #define defaultForURL(url)                                  url = [SUD URLForKey:NS_STRINGIFY(url)]
-
-

@@ -3,11 +3,10 @@ Pod::Spec.new do |s|
   s.name            = 'MSStringifyMacros'
   s.version         = '0.0.3'
   s.license         = { :type => "MIT", :file => "LICENSE" }
-  s.summary         = 'A set of macros for simplifying NSUserDefaults.'
+  s.summary         = 'A set of macros for simplifying the use of NSUserDefaults and NSCoding.'
   s.description     = <<-DESC
-                        MSStringifyMacros provides a convenient shorthand
-                        alternative to the normally tedious and potentially error-prone 
-                        standard approach to coding for NSUserDefaults and NSCoding.
+                        MSStringifyMacros provides a convenient alternative to the normally tedious 
+                        and potentially error-prone standard approach to coding for NSUserDefaults and NSCoding.
                     DESC
   s.homepage        = 'https://bitbucket.org/msagal/msstringifymacros'
   s.authors         = { 'Murray Sagal' => 'murraysagal@mac.com' }

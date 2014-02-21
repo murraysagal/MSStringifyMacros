@@ -33,7 +33,7 @@ defaultForObject(self.foo);
 defaultForObject(self.bar);
 ```
 
-As you can see, there is a lot less code, it's a lot simpler, and less error-prone.
+As you can see, there is a lot less code, it's a lot simpler, and less error-prone. If you're curious about how this works you can skip ahead to the Stringification section. The short story is that the keys required by the NSUserDefaults or NSCoding methods are created for you from the name of the property, instance variable, or local variable you pass.
 
 
 ## Installation
@@ -52,9 +52,16 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 Alternatively you can directly add the required `MSStringifyMacros*.h` source files to your project.
 
 
-## NSUserDefaults
 
-The macros support all the common NSUserDefaults methods for conveniently setting and getting defaults. The parameter you pass can be a property, an instance variable, or a local variable. Once you set a default you must use the same property, instance variable, or an identically named local variable for getting the default. 
+## Usage
+
+Macros are provided for conveniently working with NSUserDefaults and NSKeyedArchiver and NSKeyedUnarchiver.
+
+**Important**: The parameter you pass can be a property, an instance variable, or a local variable. It is critical to remember that the name of the parameter you pass is used to generate the string used for the key (see the Stringification section). So once you set a default or encode you must use either the same or an identically named property, instance variable, or local variable for getting the default or decoding.
+
+### NSUserDefaults
+
+The macros support all the common NSUserDefaults methods for conveniently setting and getting defaults.
 
 ```Objective-C
 // BOOL...
@@ -98,7 +105,7 @@ defaultForURL(url);
 ```
 
 
-## NSUserDefaults Extras
+### NSUserDefaults Extras
 
 By default, NSUserDefaults returns immutable objects even if you set a default for a mutable object. These macros conveniently manage mutable objects...
 
@@ -118,9 +125,9 @@ BOOL doesNotExist = defaultDoesNotExistForObject(object);
 ```
 
 
-## NSCoding
+### NSCoding
 
-The macros support all the common NSKeyedArchiver and NSKeyedUnarchiver methods for convenient archiving and unarchiving. The parameter you pass can be a property, an instance variable, or a local variable. Once you archive you must use the same property, instance variable, or an identically named local variable for unarchiving.
+The macros support all the common NSKeyedArchiver and NSKeyedUnarchiver methods for convenient archiving and unarchiving.
 
 ```Objective-C
 // BOOL...
@@ -196,13 +203,13 @@ is replaced by the preprocessor with 'foo' as a C string. But it gets better. By
 
 ```Objective-C
 #define NS_STRINGIFY(x) @#x
-define setDefaultForBOOL(bool) [[NSUserDefaults standardUserDefaults] setBool:bool forKey:NS_STRINGIFY(bool)]
+define setDefaultForBool(BOOL) [[NSUserDefaults standardUserDefaults] setBool:BOOL forKey:NS_STRINGIFY(BOOL)]
 ```
 
 this code...
 
 ```Objective-C
-setDefaultForBOOL(self.yourSwitch.on);
+setDefaultForBool(self.yourSwitch.on);
 ```
 
 becomes this after the preprocessor has run...
@@ -215,6 +222,6 @@ You can see the result yourself by inspecting your preprocessor output in Xcode.
 
 * use one of the macros in your code
 * be sure it builds
-* from the Product menu choose Perform Action then Preprocess "<yourFile>.m"
+* from the Product menu choose Perform Action then Preprocess "\<yourFile\>.m"
 
-In the case of NSUserDefaults and NSCoding, these macros make things easier because, with stringification, the required key parameters become self-generating. 
+In the case of NSUserDefaults and NSCoding, these macros make things easier because, with stringification, the required key parameters become self-generating.

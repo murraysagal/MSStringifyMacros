@@ -50,4 +50,3 @@
 #define decodeObject(object)        object = [aDecoder decodeObjectForKey:NS_STRINGIFY(object)]
 
 #define containsValue(value)        [aDecoder containsValueForKey:NS_STRINGIFY(value)]
-
