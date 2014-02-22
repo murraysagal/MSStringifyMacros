@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name            = 'MSStringifyMacros'
-  s.version         = '0.1.0'
+  s.version         = '0.1.1'
   s.license         = { :type => "MIT", :file => "LICENSE" }
   s.summary         = 'A set of macros for simplifying the use of NSUserDefaults and NSCoding.'
   s.description     = <<-DESC
@@ -11,9 +11,10 @@ Pod::Spec.new do |s|
   s.homepage        = 'https://github.com/murraysagal/MSStringifyMacros'
   s.authors         = { 'Murray Sagal' => 'murraysagal@mac.com' }
   s.source          = { :git => 'https://github.com/murraysagal/MSStringifyMacros.git', :tag => s.version.to_s }
-  s.platform        = :ios
-  s.platform        = :osx
   s.source_files    = 'MSStringifyMacros*.h'
+
+  s.ios.deployment_target = '2.0'
+  s.osx.deployment_target = '10.2'
   
   s.subspec 'UserDefaults' do |ss|
     ss.source_files = 'MSStringifyMacros_UserDefaults.h'
