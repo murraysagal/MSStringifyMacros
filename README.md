@@ -5,7 +5,7 @@ MSStringifyMacros provides a convenient alternative to the normally tedious and 
 
 ## Benefits
 
-Here's an example for NSUserDefaults. Normally, when coding for NSUserDefaults you would follow an approach like this where you would create constants for the keys and then set and get the defaults.
+Here's an example for `NSUserDefaults`. Normally, when coding for `NSUserDefaults` you would follow an approach like this where you would create constants for the keys and then set and get the defaults.
 
 ```Objective-C
 // constants for keys...
@@ -33,12 +33,12 @@ defaultForObject(self.foo);
 defaultForObject(self.bar);
 ```
 
-As you can see, there is a lot less code, it's a lot simpler, and less error-prone. If you're curious about how this works you can skip ahead to the Stringification section. The short story is that the keys required by the NSUserDefaults or NSCoding methods are created for you from the name of the property, instance variable, or local variable you pass.
+As you can see, there is a lot less code, it's a lot simpler, and less error-prone. If you're curious about how this works you can skip ahead to the Stringification section. The short story is that the keys required by the `NSUserDefaults` or `NSCoding` methods are created for you from the name of the property, instance variable, or local variable you pass.
 
 
 ## Installation
 
-You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not certain if there were ever any versions of Xcode where the preprocessor didn't support stringification to an NSString (see the Stringification section below). If you know, please let me know.
+You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not certain if there were ever any versions of Xcode where the preprocessor didn't support stringification to an `NSString` (see the Stringification section below). If you know, please let me know.
 
 
 ### Cocoapods
@@ -55,14 +55,14 @@ Alternatively you can directly add the required `MSStringifyMacros*.h` source fi
 
 ## Usage
 
-Macros are provided for conveniently working with NSUserDefaults and NSKeyedArchiver and NSKeyedUnarchiver.
+Macros are provided for conveniently working with `NSUserDefaults` and `NSKeyedArchiver` and `NSKeyedUnarchiver`.
 
 **Important**: The parameter you pass can be a property, an instance variable, or a local variable. It is critical to remember that the name of the parameter you pass is used to generate the string used for the key (see the Stringification section). So once you set a default or encode you must use either the same or an identically named property, instance variable, or local variable for getting the default or decoding.
 
 
 ### NSUserDefaults
 
-The macros support all the common NSUserDefaults methods for conveniently setting and getting defaults.
+The macros support all the common `NSUserDefaults` methods for conveniently setting and getting defaults.
 
 ```Objective-C
 // BOOL...
@@ -108,7 +108,7 @@ defaultForURL(url);
 
 ### NSUserDefaults Extras
 
-By default, NSUserDefaults returns immutable objects even if you set a default for a mutable object. These macros conveniently manage mutable objects...
+By default, `NSUserDefaults` returns immutable objects even if you set a default for a mutable object. These macros conveniently manage mutable objects...
 
 ```Objective-C
 defaultForMutableArray(mutableArray);
@@ -128,7 +128,7 @@ BOOL doesNotExist = defaultDoesNotExistForObject(object);
 
 ### NSCoding
 
-The macros support all the common NSKeyedArchiver and NSKeyedUnarchiver methods for convenient archiving and unarchiving.
+The macros support all the common `NSKeyedArchiver` and `NSKeyedUnarchiver` methods for convenient archiving and unarchiving.
 
 ```Objective-C
 // BOOL...
@@ -163,7 +163,7 @@ decodeObject(object);
 containsValue(value);
 ```
 
-**Important:** These macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the NSCoding init and encode methods need to look like this:
+**Important:** These macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the `NSCoding` init and encode methods need to look like this:
 
 ```Objective-C
 - (void)encodeWithCoder:(NSCoder *)aCoder;
@@ -200,7 +200,7 @@ this code
 stringify(foo);
 ```
 
-is replaced by the preprocessor with 'foo' as a C string. But it gets better. By prefixing with @ you get an NSString object instead of a C string. How handy is that? So, given these macros...
+is replaced by the preprocessor with 'foo' as a C string. But it gets better. By prefixing with @ you get an `NSString` object instead of a C string. How handy is that? So, given these macros...
 
 ```Objective-C
 #define NS_STRINGIFY(x) @#x
@@ -225,4 +225,4 @@ You can see the result yourself by inspecting your preprocessor output in Xcode.
 * be sure it builds
 * from the Product menu choose Perform Action then Preprocess "\<yourFile\>.m"
 
-In the case of NSUserDefaults and NSCoding, these macros make things easier because, with stringification, the required key parameters become self-generating.
+In the case of `NSUserDefaults` and `NSCoding`, these macros make things easier because, with stringification, the required key parameters become self-generating.
