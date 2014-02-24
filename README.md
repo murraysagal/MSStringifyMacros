@@ -45,7 +45,7 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 
 1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`. 
 
-    > Note: I'm trying to get sub specs working to allow you to install selectively but I'm having a few problems.
+    > Note: I'm trying to get sub specs working to allow you to install selectively but I'm having a few problems. Soon I hope.
 
 2. Install the pod(s) by running `pod install`.
 3. Where you need it `#import "MSStringifyMacros_Archiving.h"` or `#import "MSStringifyMacros_UserDefaults.h"`.
