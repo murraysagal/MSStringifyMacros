@@ -26,7 +26,7 @@
 
 
 
-#define NS_STRINGIFY(x)             @#x
+#import "MSStringifyMacro.h"
 
 #define encodeBool(BOOL)            [aCoder encodeBool:BOOL forKey:NS_STRINGIFY(BOOL)]
 #define decodeBool(BOOL)            BOOL = [aDecoder decodeBoolForKey:NS_STRINGIFY(BOOL)]

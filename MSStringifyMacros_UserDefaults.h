@@ -26,7 +26,8 @@
 
 
 
-#define NS_STRINGIFY(x)                                     @#x
+#import "MSStringifyMacro.h"
+
 #define SUD                                                 [NSUserDefaults standardUserDefaults]
 
 #define setDefaultForBool(BOOL)                             [SUD setBool:BOOL forKey:NS_STRINGIFY(BOOL)]
