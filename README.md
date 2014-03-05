@@ -43,17 +43,24 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 
 ### Cocoapods
 
-1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`. 
+1. Add a pod entry for MSStringifyMacros to your Podfile: 
 
-    > Note: I'm trying to get sub specs working to allow you to install selectively but I'm having a few problems. Soon I hope.
+    `pod 'MSStringifyMacros'` for the full install
 
-2. Install the pod(s) by running `pod install`.
-3. Where you need it `#import "MSStringifyMacros_Archiving.h"` or `#import "MSStringifyMacros_UserDefaults.h"`.
+    `pod 'MSStringifyMacros/Archiving` for just the archiving macros
+
+    `pod 'MSstringifyMacros/UserDefaults` for just the user defaults macros
+
+2. Install the pod(s) by running: `pod install`
+
+3. Where you need it:
+
+    `#import "MSStringifyMacros_Archiving.h"` or `#import "MSStringifyMacros_UserDefaults.h"`
+
 
 ### Source Files
 
 Alternatively you can directly add the required `MSStringifyMacros*.h` source files to your project.
-
 
 
 ## Usage
@@ -178,6 +185,14 @@ containsValue(value);
 ## Tests
 
 The Xcode project contains a complete suite of tests so you can use these macros with confidence. 
+
+If you copy the test files to your project you may need to configure the project so the test target will recognize the files.
+
+1. Select your project in the Project Navigator pane.
+1. Select your project in the Projects and Targets pane.
+1. You must be on the Info tab.
+1. In Configurations expand Debug and your project.
+1. In <yourProjectName>Tests select Pods from the popup.
 
 
 ## License
