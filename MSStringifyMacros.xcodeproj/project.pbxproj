@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */; };
 		729D7A4518B622390002B46A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4418B622390002B46A /* Foundation.framework */; };
 		729D7A4718B6223A0002B46A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4618B622390002B46A /* CoreGraphics.framework */; };
 		729D7A4918B6223A0002B46A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4818B6223A0002B46A /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_Archiving.m; sourceTree = "<group>"; };
 		72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacro.h; sourceTree = "<group>"; };
 		729D7A4118B622390002B46A /* MSStringifyMacros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSStringifyMacros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729D7A4418B622390002B46A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,8 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */,
-				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
 				729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */,
+				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
+				72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */,
 				729D7A4A18B6223A0002B46A /* MSStringifyMacros */,
 				729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */,
 				729D7A4318B622390002B46A /* Frameworks */,
@@ -267,6 +270,7 @@
 				729D7A5B18B6223A0002B46A /* ViewController.m in Sources */,
 				729D7A5518B6223A0002B46A /* AppDelegate.m in Sources */,
 				729D7A5118B6223A0002B46A /* main.m in Sources */,
+				72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

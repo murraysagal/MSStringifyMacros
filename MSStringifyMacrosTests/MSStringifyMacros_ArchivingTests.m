@@ -208,4 +208,35 @@ static BOOL containsValueTestResultExpectedNo;
     return [[self documentsDirectory] stringByAppendingPathComponent:fileName];
 
 }
+
+- (void)testArchiveUnarchiveObject {
+    
+    NSString *stringObject = @"test";
+    NSString *stringObjectCopy = [stringObject copy];
+    
+    BOOL result;
+    
+//    stringObject = nil; // test
+    
+    archiveObjectToDocsDirectory(stringObject, result);
+    NSLog(@"[<%@ %p> %@ line= %d] result= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, (result)? @"YES" : @"NO");
+    
+    if (result == YES) {
+
+        unarchiveObjectFromDocsDirectory(stringObject);
+        NSLog(@"[<%@ %p> %@ line= %d] stringObject= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, stringObject);
+        
+        XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");
+
+    } else {
+        XCTFail(@"Failed: archiveObjectToDocsDirectory");
+    }
+    
+
+}
+
+
 @end
+
+
+

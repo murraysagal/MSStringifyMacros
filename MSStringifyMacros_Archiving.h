@@ -50,3 +50,17 @@
 #define decodeObject(object)        object = [aDecoder decodeObjectForKey:NS_STRINGIFY(object)]
 
 #define containsValue(value)        [aDecoder containsValueForKey:NS_STRINGIFY(value)]
+
+
+
+#define archiveObjectToDocsDirectory(object, result)    result = [MSStringifyMacros_Archiving archiveObject:object toDocumentsDirectoryWithFileName:NS_STRINGIFY(object)]
+#define unarchiveObjectFromDocsDirectory(object)        object = [MSStringifyMacros_Archiving unarchiveObjectWithFileName:NS_STRINGIFY(object)]
+
+
+
+@interface MSStringifyMacros_Archiving : NSObject
+
++ (BOOL)archiveObject:(id)object toDocumentsDirectoryWithFileName:(NSString *)fileName;
++ (id)unarchiveObjectWithFileName:(NSString *)fileName;
+
+@end
