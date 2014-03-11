@@ -213,26 +213,50 @@ static BOOL containsValueTestResultExpectedNo;
     
     NSString *stringObject = @"test";
     NSString *stringObjectCopy = [stringObject copy];
-    
     BOOL result;
     
-//    stringObject = nil; // test
-    
     archiveToDocsDirectory(stringObject, result);
-    NSLog(@"[<%@ %p> %@ line= %d] result= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, (result)? @"YES" : @"NO");
     
     if (result == YES) {
-
-        unarchiveFromDocsDirectory(stringObject);
-        NSLog(@"[<%@ %p> %@ line= %d] stringObject= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, stringObject);
         
+        unarchiveFromDocsDirectory(stringObject);
         XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");
-
+        
     } else {
+        
         XCTFail(@"Failed: archiveObjectToDocsDirectory");
+        
     }
-    
+}
 
+- (void)testArchiveNilObject {
+    
+    NSString *stringObject = nil;
+    BOOL result;
+    
+    archiveToDocsDirectory(stringObject, result);
+    XCTAssertFalse(result, @"Failed: stringObject nil, should return NO.");
+}
+
+- (void)testArchiveUnarchiveObjectUsingFilename {
+    
+    NSString *stringObject = @"test";
+    NSString *stringObjectCopy = [stringObject copy];
+    NSString *filename = @"test";
+    BOOL result;
+    
+    archiveToDocsDirectoryUsingFilename(stringObject, result, filename);
+    
+    if (result == YES) {
+        
+        unarchiveFromDocsDirectoryUsingFilename(stringObject, filename);
+        XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");
+        
+    } else {
+        
+        XCTFail(@"Failed: archiveToDocsDirectoryUsingFilename");
+        
+    }
 }
 
 

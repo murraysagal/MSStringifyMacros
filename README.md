@@ -54,7 +54,7 @@ You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not
 
 Alternatively you can add the required source files to your project:
 
-* NSStringifyMacro*.{h,m}
+* NSStringifyMacro*.h
 * NSKeyedArchiver*.{h,m}
 * NSKeyedUnarchiver*.{h,m}
 

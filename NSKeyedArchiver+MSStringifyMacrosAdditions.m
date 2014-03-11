@@ -12,8 +12,10 @@
 
 + (BOOL)archiveObject:(id)object toDocumentsDirectoryWithFileName:(NSString *)fileName {
     
+    if (object == nil) return NO;
+    
     NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:fileName];
-    BOOL result = (object != nil)? [NSKeyedArchiver archiveRootObject:object toFile:filePath] : NO;
+    BOOL result = [NSKeyedArchiver archiveRootObject:object toFile:filePath];
     return result;
     
 }

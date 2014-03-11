@@ -60,10 +60,3 @@
 #define archiveToDocsDirectoryUsingFilename(object, result, filename)   result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:filename]
 #define unarchiveFromDocsDirectory(object)                              object = [NSKeyedUnarchiver unarchiveObjectWithFileName:NS_STRINGIFY(object)]
 #define unarchiveFromDocsDirectoryUsingFilename(object, filename)       object = [NSKeyedUnarchiver unarchiveObjectWithFileName:filename]
-
-
-
-@interface MSStringifyMacros_Archiving : NSObject
-
-
-@end

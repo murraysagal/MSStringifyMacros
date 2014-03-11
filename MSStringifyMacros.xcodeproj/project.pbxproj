@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */; };
 		7292072F18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */; };
 		7292073218CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292073118CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m */; };
 		729D7A4518B622390002B46A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4418B622390002B46A /* Foundation.framework */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_Archiving.m; sourceTree = "<group>"; };
 		72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacro.h; sourceTree = "<group>"; };
 		7292072D18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.h"; sourceTree = "<group>"; };
 		7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.m"; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */,
 				729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */,
 				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
-				72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */,
 				729D7A4A18B6223A0002B46A /* MSStringifyMacros */,
 				729D7A6918B6223A0002B46A /* MSStringifyMacrosTests */,
 				729D7A4318B622390002B46A /* Frameworks */,
@@ -281,7 +278,6 @@
 				729D7A5518B6223A0002B46A /* AppDelegate.m in Sources */,
 				729D7A5118B6223A0002B46A /* main.m in Sources */,
 				7292073218CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m in Sources */,
-				72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */,
 				7292072F18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
