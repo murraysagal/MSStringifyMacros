@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */; };
+		7292072F18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */; };
+		7292073218CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292073118CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m */; };
 		729D7A4518B622390002B46A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4418B622390002B46A /* Foundation.framework */; };
 		729D7A4718B6223A0002B46A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4618B622390002B46A /* CoreGraphics.framework */; };
 		729D7A4918B6223A0002B46A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729D7A4818B6223A0002B46A /* UIKit.framework */; };
@@ -38,6 +40,10 @@
 /* Begin PBXFileReference section */
 		72493DD518C8AE3100931DAE /* MSStringifyMacros_Archiving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_Archiving.m; sourceTree = "<group>"; };
 		72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacro.h; sourceTree = "<group>"; };
+		7292072D18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.h"; sourceTree = "<group>"; };
+		7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.m"; sourceTree = "<group>"; };
+		7292073018CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+MSStringifyMacrosAdditions.h"; sourceTree = "<group>"; };
+		7292073118CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+MSStringifyMacrosAdditions.m"; sourceTree = "<group>"; };
 		729D7A4118B622390002B46A /* MSStringifyMacros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSStringifyMacros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729D7A4418B622390002B46A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		729D7A4618B622390002B46A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +98,10 @@
 		729D7A3818B622390002B46A = {
 			isa = PBXGroup;
 			children = (
+				7292072D18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.h */,
+				7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */,
+				7292073018CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.h */,
+				7292073118CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m */,
 				72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */,
 				729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */,
 				729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */,
@@ -214,7 +224,7 @@
 		729D7A3918B622390002B46A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Murray Sagal";
 				TargetAttributes = {
 					729D7A6118B6223A0002B46A = {
@@ -270,7 +280,9 @@
 				729D7A5B18B6223A0002B46A /* ViewController.m in Sources */,
 				729D7A5518B6223A0002B46A /* AppDelegate.m in Sources */,
 				729D7A5118B6223A0002B46A /* main.m in Sources */,
+				7292073218CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.m in Sources */,
 				72493DD618C8AE3100931DAE /* MSStringifyMacros_Archiving.m in Sources */,
+				7292072F18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +337,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -364,7 +375,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,7 +432,6 @@
 		729D7A7718B6223A0002B46A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MSStringifyMacros.app/MSStringifyMacros";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -445,7 +454,6 @@
 		729D7A7818B6223A0002B46A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MSStringifyMacros.app/MSStringifyMacros";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

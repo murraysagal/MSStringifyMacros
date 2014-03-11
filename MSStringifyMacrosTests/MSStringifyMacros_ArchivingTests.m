@@ -218,12 +218,12 @@ static BOOL containsValueTestResultExpectedNo;
     
 //    stringObject = nil; // test
     
-    archiveObjectToDocsDirectory(stringObject, result);
+    archiveToDocsDirectory(stringObject, result);
     NSLog(@"[<%@ %p> %@ line= %d] result= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, (result)? @"YES" : @"NO");
     
     if (result == YES) {
 
-        unarchiveObjectFromDocsDirectory(stringObject);
+        unarchiveFromDocsDirectory(stringObject);
         NSLog(@"[<%@ %p> %@ line= %d] stringObject= %@", [self class], self, NSStringFromSelector(_cmd), __LINE__, stringObject);
         
         XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");

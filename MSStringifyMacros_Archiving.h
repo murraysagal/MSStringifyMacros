@@ -27,6 +27,9 @@
 
 
 #import "MSStringifyMacro.h"
+#import "NSKeyedArchiver+MSStringifyMacrosAdditions.h"
+#import "NSKeyedUnarchiver+MSStringifyMacrosAdditions.h"
+
 
 #define encodeBool(BOOL)            [aCoder encodeBool:BOOL forKey:NS_STRINGIFY(BOOL)]
 #define decodeBool(BOOL)            BOOL = [aDecoder decodeBoolForKey:NS_STRINGIFY(BOOL)]
@@ -53,14 +56,14 @@
 
 
 
-#define archiveObjectToDocsDirectory(object, result)    result = [MSStringifyMacros_Archiving archiveObject:object toDocumentsDirectoryWithFileName:NS_STRINGIFY(object)]
-#define unarchiveObjectFromDocsDirectory(object)        object = [MSStringifyMacros_Archiving unarchiveObjectWithFileName:NS_STRINGIFY(object)]
+#define archiveToDocsDirectory(object, result)                          result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:NS_STRINGIFY(object)]
+#define archiveToDocsDirectoryUsingFilename(object, result, filename)   result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:filename]
+#define unarchiveFromDocsDirectory(object)                              object = [NSKeyedUnarchiver unarchiveObjectWithFileName:NS_STRINGIFY(object)]
+#define unarchiveFromDocsDirectoryUsingFilename(object, filename)       object = [NSKeyedUnarchiver unarchiveObjectWithFileName:filename]
 
 
 
 @interface MSStringifyMacros_Archiving : NSObject
 
-+ (BOOL)archiveObject:(id)object toDocumentsDirectoryWithFileName:(NSString *)fileName;
-+ (id)unarchiveObjectWithFileName:(NSString *)fileName;
 
 @end
