@@ -1,6 +1,6 @@
 # MSStringifyMacros
 
-MSStringifyMacros provides a convenient shrotcut to the normally tedious and potentially error-prone standard approach to writing code for `NSUserDefaults` and `NSCoding`.
+MSStringifyMacros provides a convenient shortcut to the normally tedious and potentially error-prone standard approach to writing code for `NSUserDefaults` and `NSCoding`.
 
 
 ## Benefits
