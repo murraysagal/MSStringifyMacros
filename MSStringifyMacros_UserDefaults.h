@@ -30,39 +30,39 @@
 
 #define SUD                                                 [NSUserDefaults standardUserDefaults]
 
-#define setDefaultForBool(BOOL)                             [SUD setBool:BOOL forKey:NS_STRINGIFY(BOOL)]
-#define defaultForBool(BOOL)                                BOOL = [SUD boolForKey:NS_STRINGIFY(BOOL)]
+#define MSSetDefaultForBool(BOOL)                           [SUD setBool:BOOL forKey:MSStringify(BOOL)]
+#define MSDefaultForBool(BOOL)                              BOOL = [SUD boolForKey:MSStringify(BOOL)]
 
-#define setDefaultForDouble(double)                         [SUD setDouble:double forKey:NS_STRINGIFY(double)]
-#define defaultForDouble(double)                            double = [SUD doubleForKey:NS_STRINGIFY(double)]
+#define MSSetDefaultForDouble(double)                       [SUD setDouble:double forKey:MSStringify(double)]
+#define MSDefaultForDouble(double)                          double = [SUD doubleForKey:MSStringify(double)]
 
-#define setDefaultForFloat(float)                           [SUD setFloat:float forKey:NS_STRINGIFY(float)]
-#define defaultForFloat(float)                              float = [SUD floatForKey:NS_STRINGIFY(float)]
+#define MSSetDefaultForFloat(float)                         [SUD setFloat:float forKey:MSStringify(float)]
+#define MSDefaultForFloat(float)                            float = [SUD floatForKey:MSStringify(float)]
 
-#define setDefaultForInteger(integer)                       [SUD setInteger:integer forKey:NS_STRINGIFY(integer)]
-#define defaultForInteger(integer)                          integer = [SUD integerForKey:NS_STRINGIFY(integer)]
+#define MSSetDefaultForInteger(integer)                     [SUD setInteger:integer forKey:MSStringify(integer)]
+#define MSDefaultForInteger(integer)                        integer = [SUD integerForKey:MSStringify(integer)]
 
-#define setDefaultForObject(object)                         [SUD setObject:object forKey:NS_STRINGIFY(object)]
-#define defaultForObject(object)                            object = [SUD objectForKey:NS_STRINGIFY(object)]
-#define removeDefaultForObject(object)                      [SUD removeObjectForKey:NS_STRINGIFY(object)]
+#define MSSetDefaultForObject(object)                       [SUD setObject:object forKey:MSStringify(object)]
+#define MSDefaultForObject(object)                          object = [SUD objectForKey:MSStringify(object)]
+#define MSRemoveDefaultForObject(object)                    [SUD removeObjectForKey:MSStringify(object)]
 
-#define defaultDoesNotExistForObject(object)                [SUD objectForKey:NS_STRINGIFY(object)] == nil
-#define defaultExistsForObject(object)                      [SUD objectForKey:NS_STRINGIFY(object)] != nil
+#define MSDefaultDoesNotExistForObject(object)              [SUD objectForKey:MSStringify(object)] == nil
+#define MSDefaultExistsForObject(object)                    [SUD objectForKey:MSStringify(object)] != nil
 
-#define defaultForArray(array)                              array = [SUD arrayForKey:NS_STRINGIFY(array)]
-#define defaultForMutableArray(mutableArray)                mutableArray = [[SUD arrayForKey:NS_STRINGIFY(mutableArray)] mutableCopy]
+#define MSDefaultForArray(array)                            array = [SUD arrayForKey:MSStringify(array)]
+#define MSDefaultForMutableArray(mutableArray)              mutableArray = [[SUD arrayForKey:MSStringify(mutableArray)] mutableCopy]
 
-#define defaultForData(data)                                data = [SUD dataForKey:NS_STRINGIFY(data)]
-#define defaultForMutableData(mutableData)                  mutableData = [[SUD dataForKey:NS_STRINGIFY(mutableData)] mutableCopy]
+#define MSDefaultForData(data)                              data = [SUD dataForKey:MSStringify(data)]
+#define MSDefaultForMutableData(mutableData)                mutableData = [[SUD dataForKey:MSStringify(mutableData)] mutableCopy]
 
-#define defaultForDictionary(dictionary)                    dictionary = [SUD dictionaryForKey:NS_STRINGIFY(dictionary)]
-#define defaultForMutableDictionary(mutableDictionary)      mutableDictionary = [[SUD dictionaryForKey:NS_STRINGIFY(mutableDictionary)] mutableCopy]
+#define MSDefaultForDictionary(dictionary)                  dictionary = [SUD dictionaryForKey:MSStringify(dictionary)]
+#define MSDefaultForMutableDictionary(mutableDictionary)    mutableDictionary = [[SUD dictionaryForKey:MSStringify(mutableDictionary)] mutableCopy]
 
-#define defaultForString(string)                            string = [SUD stringForKey:NS_STRINGIFY(string)]
-#define defaultForMutableString(mutableString)              mutableString = [[SUD stringForKey:NS_STRINGIFY(mutableString)] mutableCopy]
+#define MSDefaultForString(string)                          string = [SUD stringForKey:MSStringify(string)]
+#define MSDefaultForMutableString(mutableString)            mutableString = [[SUD stringForKey:MSStringify(mutableString)] mutableCopy]
 
-#define defaultForStringArray(stringArray)                  stringArray = [SUD stringArrayForKey:NS_STRINGIFY(stringArray)]
-#define defaultForStringArrayMutable(stringArrayMutable)    stringArrayMutable = [[SUD stringArrayForKey:NS_STRINGIFY(stringArrayMutable)] mutableCopy]
+#define MSDefaultForStringArray(stringArray)                stringArray = [SUD stringArrayForKey:MSStringify(stringArray)]
+#define MSDefaultForStringArrayMutable(stringArrayMutable)  stringArrayMutable = [[SUD stringArrayForKey:MSStringify(stringArrayMutable)] mutableCopy]
 
-#define setDefaultForURL(url)                               [SUD setURL:url forKey:NS_STRINGIFY(url)]
-#define defaultForURL(url)                                  url = [SUD URLForKey:NS_STRINGIFY(url)]
+#define MSSetDefaultForURL(url)                             [SUD setURL:url forKey:MSStringify(url)]
+#define MSDefaultForURL(url)                                url = [SUD URLForKey:MSStringify(url)]

@@ -32,17 +32,17 @@ static BOOL containsValueTestResultExpectedNo;
     self = [super init];
     if (self) {
         
-        decodeBool(self.testBool);
-        decodeDouble(self.testDouble);
-        decodeFloat(self.testfloat);
-        decodeInt(self.testInt);
-        decodeInt32(self.testInt32);
-        decodeInt64(self.testInt64);
-        decodeObject(self.testString);
+        MSDecodeBool(self.testBool);
+        MSDecodeDouble(self.testDouble);
+        MSDecodeFloat(self.testfloat);
+        MSDecodeInt(self.testInt);
+        MSDecodeInt32(self.testInt32);
+        MSDecodeInt64(self.testInt64);
+        MSDecodeObject(self.testString);
         
         if (shouldTestContainsValue) {
-            containsValueTestResultExpectedYes = containsValue(self.testBool);
-            containsValueTestResultExpectedNo = containsValue(@"aNonExistentValue");
+            containsValueTestResultExpectedYes = MSContainsValue(self.testBool);
+            containsValueTestResultExpectedNo = MSContainsValue(@"aNonExistentValue");
         }
     }
     
@@ -51,13 +51,13 @@ static BOOL containsValueTestResultExpectedNo;
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
 
-    encodeBool(self.testBool);
-    encodeDouble(self.testDouble);
-    encodeFloat(self.testfloat);
-    encodeInt(self.testInt);
-    encodeInt32(self.testInt32);
-    encodeInt64(self.testInt64);
-    encodeObject(self.testString);
+    MSEncodeBool(self.testBool);
+    MSEncodeDouble(self.testDouble);
+    MSEncodeFloat(self.testfloat);
+    MSEncodeInt(self.testInt);
+    MSEncodeInt32(self.testInt32);
+    MSEncodeInt64(self.testInt64);
+    MSEncodeObject(self.testString);
     
 }
 
@@ -190,8 +190,8 @@ static BOOL containsValueTestResultExpectedNo;
     BOOL archiveSuccessful = [NSKeyedArchiver archiveRootObject:self.testObject toFile:self.filePath];
     if (archiveSuccessful) {
         self.testObject = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
-        XCTAssertTrue(containsValueTestResultExpectedYes, @"containsValue() returned no, should be yes.");
-        XCTAssertFalse(containsValueTestResultExpectedNo, @"containsValue() returned yes, should be no.");
+        XCTAssertTrue(containsValueTestResultExpectedYes, @"MSContainsValue() returned no, should be yes.");
+        XCTAssertFalse(containsValueTestResultExpectedNo, @"MSContainsValue() returned yes, should be no.");
     } else {
         XCTFail(@"archiveRootObject failed.");
     }
@@ -215,11 +215,11 @@ static BOOL containsValueTestResultExpectedNo;
     NSString *stringObjectCopy = [stringObject copy];
     BOOL result;
     
-    archiveToDocsDirectory(stringObject, result);
+    MSArchiveToDocsDirectory(stringObject, result);
     
     if (result == YES) {
         
-        unarchiveFromDocsDirectory(stringObject);
+        MSUnarchiveFromDocsDirectory(stringObject);
         XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");
         
     } else {
@@ -234,7 +234,7 @@ static BOOL containsValueTestResultExpectedNo;
     NSString *stringObject = nil;
     BOOL result;
     
-    archiveToDocsDirectory(stringObject, result);
+    MSArchiveToDocsDirectory(stringObject, result);
     XCTAssertFalse(result, @"Failed: stringObject nil, should return NO.");
 }
 
@@ -245,11 +245,11 @@ static BOOL containsValueTestResultExpectedNo;
     NSString *filename = @"test";
     BOOL result;
     
-    archiveToDocsDirectoryUsingFilename(stringObject, result, filename);
+    MSArchiveToDocsDirectoryUsingFilename(stringObject, result, filename);
     
     if (result == YES) {
         
-        unarchiveFromDocsDirectoryUsingFilename(stringObject, filename);
+        MSUnarchiveFromDocsDirectoryUsingFilename(stringObject, filename);
         XCTAssertEqualObjects(stringObject, stringObjectCopy, @"Failed: Unarchived object not equal to original.");
         
     } else {

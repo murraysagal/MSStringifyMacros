@@ -25,12 +25,12 @@ By leveraging a preprocessor feature called stringification (explained in a late
 
 ```Objective-C
 // setting defaults...
-setDefaultForObject(self.foo);
-setDefaultForObject(self.bar);
+MSSetDefaultForObject(self.foo);
+MSSetDefaultForObject(self.bar);
 
 // getting defaults...
-defaultForObject(self.foo);
-defaultForObject(self.bar);
+MSDefaultForObject(self.foo);
+MSDefaultForObject(self.bar);
 ```
 
 As you can see, there is a lot less code, it's a lot simpler, and less error-prone. If you're curious about how this works you can skip ahead to the Stringification section. The short story is that the required keys are created for you from the name of the property, instance variable, or local variable you pass.
@@ -72,43 +72,43 @@ The macros support all the common `NSUserDefaults` methods for conveniently sett
 
 ```Objective-C
 // BOOL...
-setDefaultForBool(BOOL);
-defaultForBool(BOOL);
+MSSetDefaultForBool(BOOL);
+MSDefaultForBool(BOOL);
 
 // double...
-setDefaultForDouble(double);
-defaultForDouble(double);
+MSSetDefaultForDouble(double);
+MSDefaultForDouble(double);
 
 // float...
-setDefaultForFloat(float);
-defaultForFloat(float);
+MSSetDefaultForFloat(float);
+MSDefaultForFloat(float);
 
 // integer...
-setDefaultForInteger(integer);
-defaultForInteger(integer);
+MSSetDefaultForInteger(integer);
+MSDefaultForInteger(integer);
 
 // object...
-setDefaultForObject(object);
-defaultForObject(object);
-removeDefaultForObject(object);
+MSSetDefaultForObject(object);
+MSDefaultForObject(object);
+MSRemoveDefaultForObject(object);
 
 // array...
-defaultForArray(array);
+MSDefaultForArray(array);
 
 // data...
-defaultForData(data);
+MSDefaultForData(data);
 
 // dictionary...
-defaultForDictionary(dictionary);
+MSDefaultForDictionary(dictionary);
 
 // string...
-defaultForString(string);
+MSDefaultForString(string);
 
 // array of strings...
-defaultForStringArray(srrayOfStrings);
+MSDefaultForStringArray(arrayOfStrings);
 
 // url...
-defaultForURL(url);
+MSDefaultForURL(url);
 ```
 
 
@@ -117,18 +117,18 @@ defaultForURL(url);
 By default, `NSUserDefaults` returns immutable objects even if you set a default for a mutable object. These macros conveniently manage mutable objects...
 
 ```Objective-C
-defaultForMutableArray(mutableArray);
-defaultForMutableData(mutableData);
-defaultForMutableDictionary(mutableDictionary);
-defaultForMutableString(mutableString);
-defaultForStringArrayMutable(stringArrayMutable);
+MSDefaultForMutableArray(mutableArray);
+MSDefaultForMutableData(mutableData);
+MSDefaultForMutableDictionary(mutableDictionary);
+MSDefaultForMutableString(mutableString);
+MSDefaultForStringArrayMutable(stringArrayMutable);
 ```
 
 You can also test for the existence or non-existence of a default for an object...
 
 ```Objective-C
-BOOL exists = defaultExistsForObject(object);
-BOOL doesNotExist = defaultDoesNotExistForObject(object);
+BOOL exists = MSDefaultExistsForObject(object);
+BOOL doesNotExist = MSDefaultDoesNotExistForObject(object);
 ```
 
 
@@ -146,11 +146,11 @@ Similar to the `NSUserDefaults` macros, these macros stringify the object you pa
 ```Objective-C
 // archiving...
 BOOL result;
-archiveToDocsDirectory(object, result);
+MSArchiveToDocsDirectory(object, result);
 if (result == NO) {    };
 
 // unarchiving...
-unarchiveFromDocsDirectory(object);
+MSUnarchiveFromDocsDirectory(object);
 if (object == nil {    };
 ```
 
@@ -159,49 +159,49 @@ These two work the same but allow you to specify the filename.
 ```Objective-C
 // archiving...
 BOOL result;
-archiveToDocsDirectoryUsingFilename(object, result, filename);
+MSArchiveToDocsDirectoryUsingFilename(object, result, filename);
 if (result == NO) {    };
 
-unarchiveFromDocsDirectoryUsingFilename(object, filename);
+MSUnarchiveFromDocsDirectoryUsingFilename(object, filename);
 if (object == nil {    };
 ```
 
 
 #### Encoding and Decoding
 
-The macros support all the common `NSKeyedArchiver` and `NSKeyedUnarchiver` methods for convenient encoding and decoding.
+These macros support all the common `NSKeyedArchiver` and `NSKeyedUnarchiver` methods for convenient encoding and decoding.
 
 ```Objective-C
 // BOOL...
-encodeBool(BOOL);
-decodeBool(BOOL);
+MSEncodeBool(BOOL);
+MSDecodeBool(BOOL);
 
 // double...
-encodeDouble(double);
-decodeDouble(double);
+MSEncodeDouble(double);
+MSDecodeDouble(double);
 
 // float...
-encodeFloat(float);
-decodeFloat(float);
+MSEncodeFloat(float);
+MSDecodeFloat(float);
 
 // int...
-encodeInt(int);
-decodeInt(int);
+MSEncodeInt(int);
+MSDecodeInt(int);
 
 // int32...
-encodeInt32(int32_t);
-decodeInt32(int32_t);
+MSEncodeInt32(int32_t);
+MSDecodeInt32(int32_t);
 
 // int64...
-encodeInt64(int64_t);
-decodeInt64(int64_t);
+MSEncodeInt64(int64_t);
+MSDecodeInt64(int64_t);
 
 // objects...
-encodeObject(object);
-decodeObject(object);
+MSEncodeObject(object);
+MSDecodeObject(object);
 
 // checking for a value...
-containsValue(value);
+MSContainsValue(value);
 ```
 
 **Important:** These macros assume that your coder and decoder use the standard names provided by Xcode's code completion: `aCoder` and `aDecoder` respectively. In other words, your method signatures for the `NSCoding` init and encode methods need to look like this:
@@ -240,26 +240,26 @@ These macros are made possible by a feature of the C preprocessor called [String
 For example, with this macro...
 
 ```Objective-C
-#define stringify(x) #x
+#define Stringify(x) #x
 ```
 
 this code
 
 ```Objective-C
-stringify(foo);
+Stringify(foo);
 ```
 
 is replaced by the preprocessor with 'foo' as a C string. But it gets better. By prefixing with @ you get an `NSString` object instead of a C string. How handy is that? So, given these macros...
 
 ```Objective-C
-#define NS_STRINGIFY(symbol) @#symbol
-define setDefaultForBool(BOOL) [[NSUserDefaults standardUserDefaults] setBool:BOOL forKey:NS_STRINGIFY(BOOL)]
+#define MSStringify(symbol) @#symbol
+define MSSetDefaultForBool(BOOL) [[NSUserDefaults standardUserDefaults] setBool:BOOL forKey:MSStringify(BOOL)]
 ```
 
 this code...
 
 ```Objective-C
-setDefaultForBool(self.yourSwitch.on);
+MSSetDefaultForBool(self.yourSwitch.on);
 ```
 
 becomes this after the preprocessor has run...

@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacro.h; sourceTree = "<group>"; };
+		72871BD418BB64CC006A9F87 /* MSStringifyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MSStringifyMacro.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7292072D18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.h"; sourceTree = "<group>"; };
 		7292072E18CE1A79006DAFDC /* NSKeyedArchiver+MSStringifyMacrosAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+MSStringifyMacrosAdditions.m"; sourceTree = "<group>"; };
 		7292073018CE1D8A006DAFDC /* NSKeyedUnarchiver+MSStringifyMacrosAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+MSStringifyMacrosAdditions.h"; sourceTree = "<group>"; };
@@ -60,13 +60,13 @@
 		729D7A6318B6223A0002B46A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		729D7A6B18B6223A0002B46A /* MSStringifyMacrosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSStringifyMacrosTests-Info.plist"; sourceTree = "<group>"; };
 		729D7A6D18B6223A0002B46A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		729D7A7C18B623290002B46A /* MSStringifyMacros_UserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_UserDefaultsTests.m; sourceTree = "<group>"; };
-		729D7A8418B6273E0002B46A /* MSStringifyMacros_ArchivingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSStringifyMacros_ArchivingTests.m; sourceTree = "<group>"; };
+		729D7A7C18B623290002B46A /* MSStringifyMacros_UserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MSStringifyMacros_UserDefaultsTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		729D7A8418B6273E0002B46A /* MSStringifyMacros_ArchivingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MSStringifyMacros_ArchivingTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		729D7A8718B62A160002B46A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
+		729D7A8818B62A160002B46A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		729D7A8918B62B0C0002B46A /* MSStringifyMacros.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MSStringifyMacros.podspec; sourceTree = "<group>"; };
-		729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacros_Archiving.h; sourceTree = "<group>"; };
-		729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringifyMacros_UserDefaults.h; sourceTree = "<group>"; };
+		729D7A8A18B6455D0002B46A /* MSStringifyMacros_Archiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MSStringifyMacros_Archiving.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		729D7A8E18B64F2D0002B46A /* MSStringifyMacros_UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MSStringifyMacros_UserDefaults.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -31,32 +31,32 @@
 #import "NSKeyedUnarchiver+MSStringifyMacrosAdditions.h"
 
 
-#define encodeBool(BOOL)            [aCoder encodeBool:BOOL forKey:NS_STRINGIFY(BOOL)]
-#define decodeBool(BOOL)            BOOL = [aDecoder decodeBoolForKey:NS_STRINGIFY(BOOL)]
+#define MSEncodeBool(BOOL)          [aCoder encodeBool:BOOL forKey:MSStringify(BOOL)]
+#define MSDecodeBool(BOOL)          BOOL = [aDecoder decodeBoolForKey:MSStringify(BOOL)]
 
-#define encodeDouble(double)        [aCoder encodeDouble:double forKey:NS_STRINGIFY(double)]
-#define decodeDouble(double)        double = [aDecoder decodeDoubleForKey:NS_STRINGIFY(double)]
+#define MSEncodeDouble(double)      [aCoder encodeDouble:double forKey:MSStringify(double)]
+#define MSDecodeDouble(double)      double = [aDecoder decodeDoubleForKey:MSStringify(double)]
 
-#define encodeFloat(float)          [aCoder encodeFloat:float forKey:NS_STRINGIFY(float)]
-#define decodeFloat(float)          float = [aDecoder decodeFloatForKey:NS_STRINGIFY(float)]
+#define MSEncodeFloat(float)        [aCoder encodeFloat:float forKey:MSStringify(float)]
+#define MSDecodeFloat(float)        float = [aDecoder decodeFloatForKey:MSStringify(float)]
 
-#define encodeInt(int)              [aCoder encodeInt:int forKey:NS_STRINGIFY(int)]
-#define decodeInt(int)              int = [aDecoder decodeIntForKey:NS_STRINGIFY(int)]
+#define MSEncodeInt(int)            [aCoder encodeInt:int forKey:MSStringify(int)]
+#define MSDecodeInt(int)            int = [aDecoder decodeIntForKey:MSStringify(int)]
 
-#define encodeInt32(int32_t)        [aCoder encodeInt32:int32_t forKey:NS_STRINGIFY(int32_t)]
-#define decodeInt32(int32_t)        int32_t = [aDecoder decodeInt32ForKey:NS_STRINGIFY(int32_t)]
+#define MSEncodeInt32(int32_t)      [aCoder encodeInt32:int32_t forKey:MSStringify(int32_t)]
+#define MSDecodeInt32(int32_t)      int32_t = [aDecoder decodeInt32ForKey:MSStringify(int32_t)]
 
-#define encodeInt64(int64_t)        [aCoder encodeInt64:int64_t forKey:NS_STRINGIFY(int64_t)]
-#define decodeInt64(int64_t)        int64_t = [aDecoder decodeInt64ForKey:NS_STRINGIFY(int64_t)]
+#define MSEncodeInt64(int64_t)      [aCoder encodeInt64:int64_t forKey:MSStringify(int64_t)]
+#define MSDecodeInt64(int64_t)      int64_t = [aDecoder decodeInt64ForKey:MSStringify(int64_t)]
 
-#define encodeObject(object)        [aCoder encodeObject:object forKey:NS_STRINGIFY(object)]
-#define decodeObject(object)        object = [aDecoder decodeObjectForKey:NS_STRINGIFY(object)]
+#define MSEncodeObject(object)      [aCoder encodeObject:object forKey:MSStringify(object)]
+#define MSDecodeObject(object)      object = [aDecoder decodeObjectForKey:MSStringify(object)]
 
-#define containsValue(value)        [aDecoder containsValueForKey:NS_STRINGIFY(value)]
+#define MSContainsValue(value)      [aDecoder containsValueForKey:MSStringify(value)]
 
 
 
-#define archiveToDocsDirectory(object, result)                          result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:NS_STRINGIFY(object)]
-#define archiveToDocsDirectoryUsingFilename(object, result, filename)   result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:filename]
-#define unarchiveFromDocsDirectory(object)                              object = [NSKeyedUnarchiver unarchiveObjectWithFileName:NS_STRINGIFY(object)]
-#define unarchiveFromDocsDirectoryUsingFilename(object, filename)       object = [NSKeyedUnarchiver unarchiveObjectWithFileName:filename]
+#define MSArchiveToDocsDirectory(object, result)                        result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:MSStringify(object)]
+#define MSArchiveToDocsDirectoryUsingFilename(object, result, filename) result = [NSKeyedArchiver archiveObject:object toDocumentsDirectoryWithFileName:filename]
+#define MSUnarchiveFromDocsDirectory(object)                            object = [NSKeyedUnarchiver unarchiveObjectWithFileName:MSStringify(object)]
+#define MSUnarchiveFromDocsDirectoryUsingFilename(object, filename)     object = [NSKeyedUnarchiver unarchiveObjectWithFileName:filename]

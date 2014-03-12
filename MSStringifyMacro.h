@@ -24,4 +24,4 @@
 // THE SOFTWARE.
 //
 
-#define NS_STRINGIFY(symbol) @#symbol
+#define MSStringify(symbol) @#symbol

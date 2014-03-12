@@ -38,7 +38,7 @@
 - (void)testBOOLNoKey {
     
     BOOL savedBOOL = YES;
-    defaultForBool(savedBOOL);
+    MSDefaultForBool(savedBOOL);
     XCTAssertFalse(savedBOOL, @"No key for savedBOOL, savedBOOL should be NO");
 }
 
@@ -46,8 +46,8 @@
     
     BOOL expectedResult = NO;
     BOOL savedBOOL = NO;
-    setDefaultForBool(savedBOOL);
-    defaultForBool(savedBOOL);
+    MSSetDefaultForBool(savedBOOL);
+    MSDefaultForBool(savedBOOL);
     XCTAssertEqual(savedBOOL, expectedResult, @"savedBOOL and expectedResult not equal.");
 }
 
@@ -55,8 +55,8 @@
     
     BOOL expectedResult = YES;
     BOOL savedBOOL = YES;
-    setDefaultForBool(savedBOOL);
-    defaultForBool(savedBOOL);
+    MSSetDefaultForBool(savedBOOL);
+    MSDefaultForBool(savedBOOL);
     XCTAssertEqual(savedBOOL, expectedResult, @"savedBOOL and expectedResult not equal.");
 }
 
@@ -69,7 +69,7 @@
     
     NSInteger expectedResult = 0;
     NSInteger savedValue = 1;
-    defaultForInteger(savedValue);
+    MSDefaultForInteger(savedValue);
     XCTAssertEqual(savedValue, expectedResult, @"No key for savedValue, savedValue should be zero.");
 }
 
@@ -77,8 +77,8 @@
     
     NSInteger expectedResult = 0;
     NSInteger savedInteger = 0;
-    setDefaultForInteger(savedInteger);
-    defaultForInteger(savedInteger);
+    MSSetDefaultForInteger(savedInteger);
+    MSDefaultForInteger(savedInteger);
     XCTAssertEqual(savedInteger, expectedResult, @"savedInteger and expectedResult not equal.");
 }
 
@@ -86,8 +86,8 @@
     
     NSInteger expectedResult = 1;
     NSInteger savedInteger = 1;
-    setDefaultForInteger(savedInteger);
-    defaultForInteger(savedInteger);
+    MSSetDefaultForInteger(savedInteger);
+    MSDefaultForInteger(savedInteger);
     XCTAssertEqual(savedInteger, expectedResult, @"savedInteger and expectedResult not equal.");
 }
 
@@ -95,8 +95,8 @@
     
     NSInteger expectedResult = -1;
     NSInteger savedInteger = -1;
-    setDefaultForInteger(savedInteger);
-    defaultForInteger(savedInteger);
+    MSSetDefaultForInteger(savedInteger);
+    MSDefaultForInteger(savedInteger);
     XCTAssertEqual(savedInteger, expectedResult, @"savedInteger and expectedResult not equal.");
 }
 
@@ -112,7 +112,7 @@
     
     float expectedResult1 = 0;
     float savedFloat1 = 1;
-    defaultForFloat(savedFloat1);
+    MSDefaultForFloat(savedFloat1);
     XCTAssertEqual(savedFloat1, expectedResult1, @"No key for savedFloat, savedFloat should be zero.");
 }
 
@@ -120,8 +120,8 @@
     
     float expectedResult = 0;
     float savedFloat = 0;
-    setDefaultForFloat(savedFloat);
-    defaultForFloat(savedFloat);
+    MSSetDefaultForFloat(savedFloat);
+    MSDefaultForFloat(savedFloat);
     XCTAssertEqual(savedFloat, expectedResult, @"savedFloat and expectedResult not equal.");
 }
 
@@ -129,8 +129,8 @@
     
     float expectedResult = 99.9;
     float savedFloat = 99.9;
-    setDefaultForFloat(savedFloat);
-    defaultForFloat(savedFloat);
+    MSSetDefaultForFloat(savedFloat);
+    MSDefaultForFloat(savedFloat);
     XCTAssertEqual(savedFloat, expectedResult, @"savedFloat and expectedResult not equal.");
 }
 
@@ -138,8 +138,8 @@
     
     float expectedResult = -99.0;
     float savedFloat = -99.0;
-    setDefaultForFloat(savedFloat);
-    defaultForFloat(savedFloat);
+    MSSetDefaultForFloat(savedFloat);
+    MSDefaultForFloat(savedFloat);
     XCTAssertEqual(savedFloat, expectedResult, @"savedFloat and expectedResult not equal.");
 }
 
@@ -155,7 +155,7 @@
     
     double expectedResult1 = 0;
     double savedDouble1 = 1;
-    defaultForDouble(savedDouble1);
+    MSDefaultForDouble(savedDouble1);
     XCTAssertEqual(savedDouble1, expectedResult1, @"No key for savedDouble, savedDouble should be zero.");
 }
 
@@ -163,8 +163,8 @@
     
     double expectedResult = 0;
     double savedDouble = 0;
-    setDefaultForDouble(savedDouble);
-    defaultForDouble(savedDouble);
+    MSSetDefaultForDouble(savedDouble);
+    MSDefaultForDouble(savedDouble);
     XCTAssertEqual(savedDouble, expectedResult, @"savedDouble and expectedResult not equal.");
 }
 
@@ -172,8 +172,8 @@
     
     double expectedResult = 99.9;
     double savedDouble = 99.9;
-    setDefaultForDouble(savedDouble);
-    defaultForDouble(savedDouble);
+    MSSetDefaultForDouble(savedDouble);
+    MSDefaultForDouble(savedDouble);
     XCTAssertEqual(savedDouble, expectedResult, @"savedDouble and expectedResult not equal.");
 }
 
@@ -181,8 +181,8 @@
     
     double expectedResult = -99.9;
     double savedDouble = -99.9;
-    setDefaultForDouble(savedDouble);
-    defaultForDouble(savedDouble);
+    MSSetDefaultForDouble(savedDouble);
+    MSDefaultForDouble(savedDouble);
     XCTAssertEqual(savedDouble, expectedResult, @"savedDouble and expectedResult not equal.");
 }
 
@@ -194,15 +194,15 @@
 - (void)testArrayNoKey {
     
     NSArray *testArray = @[ @1, @2, @3 ];
-    defaultForArray(testArray);
+    MSDefaultForArray(testArray);
     XCTAssertNil(testArray, @"There is no key for testArray, should be nil but was not.");
 }
 
 - (void)testArrayNotNSArray {
     
     id stringObject = @"not an NSArray";
-    setDefaultForObject(stringObject);
-    defaultForArray(stringObject);
+    MSSetDefaultForObject(stringObject);
+    MSDefaultForArray(stringObject);
     XCTAssertNil(stringObject, @"stringObject is not an NSArray, should be nil but was not.");
 }
 
@@ -210,8 +210,8 @@
     
     NSArray *expectedResult = @[ @1, @2, @3 ];
     NSArray *savedArray = [expectedResult copy];
-    setDefaultForObject(savedArray);
-    defaultForArray(savedArray);
+    MSSetDefaultForObject(savedArray);
+    MSDefaultForArray(savedArray);
     XCTAssertEqualObjects(savedArray, expectedResult, @"savedArray and expectedResult not equal.");
 }
 
@@ -220,8 +220,8 @@
     NSArray *array = @[ @1, @2, @3 ];
     NSMutableArray *expectedResult = [array mutableCopy];
     NSMutableArray *savedMutableArray = [expectedResult copy];
-    setDefaultForObject(savedMutableArray);
-    defaultForMutableArray(savedMutableArray);
+    MSSetDefaultForObject(savedMutableArray);
+    MSDefaultForMutableArray(savedMutableArray);
     XCTAssertEqualObjects(savedMutableArray, expectedResult, @"savedMutableArray and expectedResult not equal.");
     
     [savedMutableArray removeLastObject];
@@ -238,15 +238,15 @@
     
     NSString *testString = @"testString";
     NSData *testData = [testString dataUsingEncoding:NSUTF8StringEncoding];
-    defaultForData(testData);
+    MSDefaultForData(testData);
     XCTAssertNil(testData, @"There is no key for testData, should be nil but was not.");
 }
 
 - (void)testDataNotNSData {
     
     id stringObject = @"not an NSData";
-    setDefaultForObject(stringObject);
-    defaultForData(stringObject);
+    MSSetDefaultForObject(stringObject);
+    MSDefaultForData(stringObject);
     XCTAssertNil(stringObject, @"stringObject is not an NSData, should be nil but was not.");
 }
 
@@ -255,8 +255,8 @@
     NSString *testString = @"testString";
     NSData *expectedResult = [testString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *savedData = [expectedResult copy];
-    setDefaultForObject(savedData);
-    defaultForData(savedData);
+    MSSetDefaultForObject(savedData);
+    MSDefaultForData(savedData);
     XCTAssertEqualObjects(savedData, expectedResult, @"savedData and expectedResult not equal.");
 }
 
@@ -265,8 +265,8 @@
     NSString *testString = @"testString";
     NSMutableData *expectedResult = [[testString dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
     NSMutableData *savedMutableData = [expectedResult copy];
-    setDefaultForObject(savedMutableData);
-    defaultForMutableData(savedMutableData);
+    MSSetDefaultForObject(savedMutableData);
+    MSDefaultForMutableData(savedMutableData);
     XCTAssertEqualObjects(savedMutableData, expectedResult, @"savedData and expectedResult not equal.");
     
     [savedMutableData increaseLengthBy:1];
@@ -282,15 +282,15 @@
 - (void)testDictionaryNoKey {
     
     NSDictionary *testDictionary = [NSDictionary dictionaryWithObject:@1 forKey:@"1"];
-    defaultForDictionary(testDictionary);
+    MSDefaultForDictionary(testDictionary);
     XCTAssertNil(testDictionary, @"There is no key for testDictionary, should be nil but was not.");
 }
 
 - (void)testDictionaryNotNSDictionary {
     
     id stringObject = @"not an NSDictionary";
-    setDefaultForObject(stringObject);
-    defaultForDictionary(stringObject);
+    MSSetDefaultForObject(stringObject);
+    MSDefaultForDictionary(stringObject);
     XCTAssertNil(stringObject, @"stringObject is not an NSDictionary, should be nil but was not.");
 }
 
@@ -298,8 +298,8 @@
     
     NSDictionary *expectedResult = [NSDictionary dictionaryWithObject:@1 forKey:@"1"];
     NSDictionary *savedDictionary = [expectedResult copy];
-    setDefaultForObject(savedDictionary);
-    defaultForDictionary(savedDictionary);
+    MSSetDefaultForObject(savedDictionary);
+    MSDefaultForDictionary(savedDictionary);
     XCTAssertEqualObjects(savedDictionary, expectedResult, @"savedDictionary and expectedResult not equal.");
 }
 
@@ -308,8 +308,8 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@1 forKey:@"1"];
     NSMutableDictionary *expectedResult = [dictionary mutableCopy];
     NSMutableDictionary *savedMutableDictionary = [expectedResult copy];
-    setDefaultForObject(savedMutableDictionary);
-    defaultForMutableDictionary(savedMutableDictionary);
+    MSSetDefaultForObject(savedMutableDictionary);
+    MSDefaultForMutableDictionary(savedMutableDictionary);
     XCTAssertEqualObjects(savedMutableDictionary, expectedResult, @"savedMutableDictionary and expectedResult not equal.");
     
     [savedMutableDictionary removeObjectForKey:@"1"];
@@ -325,23 +325,23 @@
 - (void)testStringArrayNoKey {
     
     NSArray *arrayOfStrings = @[ @"a", @"b", @"c" ];
-    defaultForStringArray(arrayOfStrings);
+    MSDefaultForStringArray(arrayOfStrings);
     XCTAssertNil(arrayOfStrings, @"There is no key for testStringArray, should be nil but was not.");
 }
 
 - (void)testStringArrayNotNSArray {
     
     id stringObject = @"not an NSArray";
-    setDefaultForObject(stringObject);
-    defaultForStringArray(stringObject);
+    MSSetDefaultForObject(stringObject);
+    MSDefaultForStringArray(stringObject);
     XCTAssertNil(stringObject, @"stringObject is not an NSArray, should be nil but was not.");
 }
 
 - (void)testStringArrayNotNSArrayOfStrings {
     
     NSArray *arrayOfNumbers = @[ @1, @2, @3 ];
-    setDefaultForObject(arrayOfNumbers);
-    defaultForStringArray(arrayOfNumbers);
+    MSSetDefaultForObject(arrayOfNumbers);
+    MSDefaultForStringArray(arrayOfNumbers);
     XCTAssertNil(arrayOfNumbers, @"arrayOfNumbers is not an NSArray of strings, should be nil but was not.");
 }
 
@@ -349,8 +349,8 @@
     
     NSArray *expectedResult = @[ @"a", @"b", @"c" ];
     NSArray *savedArrayOfStrings = [expectedResult copy];
-    setDefaultForObject(savedArrayOfStrings);
-    defaultForStringArray(savedArrayOfStrings);
+    MSSetDefaultForObject(savedArrayOfStrings);
+    MSDefaultForStringArray(savedArrayOfStrings);
     XCTAssertEqualObjects(savedArrayOfStrings, expectedResult, @"savedArrayOfStrings and expectedResult not equal.");
 }
 
@@ -359,8 +359,8 @@
     NSArray *arrayOfStrings = @[ @"a", @"b", @"c" ];
     NSMutableArray *expectedResult = [arrayOfStrings mutableCopy];
     NSMutableArray *savedMutableArrayOfStrings = [expectedResult copy];
-    setDefaultForObject(savedMutableArrayOfStrings);
-    defaultForStringArrayMutable(savedMutableArrayOfStrings);
+    MSSetDefaultForObject(savedMutableArrayOfStrings);
+    MSDefaultForStringArrayMutable(savedMutableArrayOfStrings);
     XCTAssertEqualObjects(savedMutableArrayOfStrings, expectedResult, @"savedMutableArrayOfStrings and expectedResult not equal.");
     
     [savedMutableArrayOfStrings removeLastObject];
@@ -376,15 +376,15 @@
 - (void)testStringNoKey {
     
     NSString *testString = @"testString";
-    defaultForString(testString);
+    MSDefaultForString(testString);
     XCTAssertNil(testString, @"There is no key for testString, should be nil but was not.");
 }
 
 - (void)testStringNotNSStringOrNSNumber {
     
     id arrayObject = [NSArray array];
-    setDefaultForObject(arrayObject);
-    defaultForString(arrayObject);
+    MSSetDefaultForObject(arrayObject);
+    MSDefaultForString(arrayObject);
     XCTAssertNil(arrayObject,  @"arrayObject is not an NSString or an NSNumber, should be nil but was not.");
 }
 
@@ -392,8 +392,8 @@
     
     NSString *expectedResult = @"testString";
     NSString *savedString = [expectedResult copy];
-    setDefaultForObject(savedString);
-    defaultForString(savedString);
+    MSSetDefaultForObject(savedString);
+    MSDefaultForString(savedString);
     XCTAssertEqualObjects(savedString, expectedResult, @"savedString and expectedResult not equal.");
 }
 
@@ -402,8 +402,8 @@
     NSString *expectedResult = @"1";
     NSNumber *testNumber = @1;
     id savedNumber = testNumber;
-    setDefaultForObject(savedNumber);
-    defaultForString(savedNumber);
+    MSSetDefaultForObject(savedNumber);
+    MSDefaultForString(savedNumber);
     XCTAssertEqualObjects(savedNumber, expectedResult, @"savedNumber and expectedResult not equal.");
 }
 
@@ -412,8 +412,8 @@
     NSString *testString = @"testString";
     NSMutableString *expectedResult = [testString mutableCopy];
     NSMutableString *savedMutableString = [expectedResult copy];
-    setDefaultForObject(savedMutableString);
-    defaultForMutableString(savedMutableString);
+    MSSetDefaultForObject(savedMutableString);
+    MSDefaultForMutableString(savedMutableString);
     XCTAssertEqualObjects(savedMutableString, expectedResult, @"savedMutableString and expectedResult not equal.");
     
     [savedMutableString setString:@"a"];
@@ -429,7 +429,7 @@
 - (void)testURLNoKey {
     
     NSURL *testURL = [NSURL URLWithString:@"http://www.apple.com"];
-    defaultForURL(testURL);
+    MSDefaultForURL(testURL);
     XCTAssertNil(testURL, @"There is no key for testURL, should be nil but was not.");
 }
 
@@ -437,8 +437,8 @@
     
     NSURL *expectedResult = [NSURL URLWithString:@"http://www.apple.com"];
     NSURL *savedURL = [expectedResult copy];
-    setDefaultForURL(savedURL);
-    defaultForURL(savedURL);
+    MSSetDefaultForURL(savedURL);
+    MSDefaultForURL(savedURL);
     XCTAssertEqualObjects(savedURL, expectedResult, @"savedURL and expectedResult not equal.");
 }
 
@@ -454,26 +454,26 @@
     
     NSString *testString = @"testString";
     
-    setDefaultForObject(testString);
+    MSSetDefaultForObject(testString);
     
     expectedResult = NO;
-    actualResult = defaultDoesNotExistForObject(testString);
+    actualResult = MSDefaultDoesNotExistForObject(testString);
     XCTAssertEqual(actualResult, expectedResult, @"default exists, actualResult should be NO.");
     
     expectedResult = YES;
-    actualResult = defaultExistsForObject(testString);
+    actualResult = MSDefaultExistsForObject(testString);
     XCTAssertEqual(actualResult, expectedResult, @"default exists, actualResult should be YES.");
     
-    removeDefaultForObject(testString);
-    defaultForObject(testString);
+    MSRemoveDefaultForObject(testString);
+    MSDefaultForObject(testString);
     XCTAssertNil(testString, @"testString removed from defaults, testString should be nil.");
     
     expectedResult = YES;
-    actualResult = defaultDoesNotExistForObject(testString);
+    actualResult = MSDefaultDoesNotExistForObject(testString);
     XCTAssertEqual(actualResult, expectedResult, @"default does not exist, actualResult should be YES.");
     
     expectedResult = NO;
-    actualResult = defaultExistsForObject(testString);
+    actualResult = MSDefaultExistsForObject(testString);
     XCTAssertEqual(actualResult, expectedResult, @"default does not exist, actualResult should be NO.");
 }
 
