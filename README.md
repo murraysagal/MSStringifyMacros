@@ -41,7 +41,7 @@ As you can see, there is a lot less code, it's a lot simpler, and less error-pro
 You can install MSStringifyMacros in almost any Mac OS X or iOS project. I'm not certain if there were ever any versions of Xcode where the preprocessor didn't support stringification to an `NSString` (see the Stringification section below). If you know, please let me know.
 
 
-### Cocoapods
+### CocoaPods
 
 1. Add a pod entry for MSStringifyMacros to your Podfile: `pod 'MSStringifyMacros'`
 
